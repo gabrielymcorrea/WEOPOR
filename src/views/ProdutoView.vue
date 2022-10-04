@@ -8,6 +8,9 @@
 
 export default {
   name: "ProdutoView",
+  created() {
+    document.title = "Produtos";
+  },
 };
 </script>
 

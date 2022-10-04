@@ -8,6 +8,9 @@
 <script>
 export default {
   name: "DashboardView",
+  created () {
+    document.title = "Dashboard";
+  }
 };
 </script>
 

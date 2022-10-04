@@ -3,8 +3,13 @@ import { createRouter, createWebHistory } from 'vue-router'
 import ProdutoView from '../views/ProdutoView.vue'
 import DashboardView from '../views/DashboardView.vue'
 import LoginView from '../views/LoginView.vue'
+import ErrorView from "../views/ErrorView.vue"
 
 const routes = [
+  {
+    path: "/:catchAll(.*)",
+    component: ErrorView
+  },
   {
     path: '/',
     name: 'DashboardView',

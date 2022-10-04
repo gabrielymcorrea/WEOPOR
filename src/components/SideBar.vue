@@ -3,8 +3,9 @@
         <h2> <b>WE</b>OPOR </h2>
 
         <nav>
-            <router-link to="/"><font-awesome-icon icon="fa-solid fa-house" /> Dashboard</router-link>
-            <router-link to="/produtos"><font-awesome-icon icon="fa-solid fa-cookie-bite" /> Produtos</router-link>
+            <router-link to="/"><font-awesome-icon icon="fa-solid fa-house" /> Dashboard </router-link>
+            <router-link to="/produtos"><font-awesome-icon icon="fa-solid fa-cookie-bite" /> Produtos </router-link>
+            <router-link to="/"><font-awesome-icon icon="fa-solid fa-right-to-bracket" /> Sair </router-link>
         </nav>
 
         <a class="comunicado">
@@ -27,9 +28,8 @@ export default {
         width: 16rem;
         background-color: #fff;
         padding: 2rem 3rem;
-        position: relative;
+        position: fixed;
         z-index: 1;
-        display: none;
     }
 
     section h2{
@@ -73,7 +73,6 @@ export default {
     .comunicado img{
         height: 70%;
         width: 70%;
-        object-fit: cover;
         margin-bottom: 1rem;
     }
 </style>

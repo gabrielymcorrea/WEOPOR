@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <NavBar />
-    <SideBar />
+    <NavBar v-if="this.$store.state.showNav"/>
+    <SideBar v-if="this.$store.state.showNav"/>
 
     <main id="main">
       <transition mode="out-in">
@@ -57,26 +57,31 @@ a4bfeb
     cursor: default;
   }
 
-  a {
+  a,svg {
     text-decoration: none;
     color:#a0a0a0;
+    cursor: pointer;
+  }
+
+  img{
+    object-fit: cover;
   }
 
   .v-enter,
-.v-leave-to {
-  opacity: 0;
-}
+  .v-leave-to {
+    opacity: 0;
+  }
 
-.v-enter {
-  transform: translate3d(0, -20px, 0);
-}
+  .v-enter {
+    transform: translate3d(0, -20px, 0);
+  }
 
-.v-leave-to {
-  transform: translate3d(0, 20px, 0);
-}
+  .v-leave-to {
+    transform: translate3d(0, 20px, 0);
+  }
 
-.v-enter-active,
-.v-leave-active {
-  transition: all 0.3s;
-}
+  .v-enter-active,
+  .v-leave-active {
+    transition: all 0.3s;
+  }
 </style>

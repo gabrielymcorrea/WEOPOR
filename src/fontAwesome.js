@@ -1,7 +1,7 @@
-import { faHouse, faCookieBite } from '@fortawesome/free-solid-svg-icons'
+import { faHouse, faCookieBite, faSortDown, faRightToBracket, faUser } from '@fortawesome/free-solid-svg-icons'
 
 const icons = {
-    faHouse, faCookieBite
+    faHouse, faCookieBite, faSortDown, faRightToBracket, faUser
 };
 
 export default icons;

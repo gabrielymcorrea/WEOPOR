@@ -18,6 +18,8 @@
 
 
 <script>
+import { mapMutations } from "vuex";
+
 export default {
   name: "LoginView",
   data() {
@@ -25,6 +27,13 @@ export default {
       email: "",
       password: ""
     };
+  },
+  created() {
+    this.toggleEveryDisplay();
+    document.title = "Login";
+  },
+  methods: {
+    ...mapMutations(["toggleEveryDisplay"]),
   },
 };
 </script>
