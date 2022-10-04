@@ -67,6 +67,14 @@ a4bfeb
     object-fit: cover;
   }
 
+  .container{
+    /* padding-top
+padding-right
+padding-bottom
+padding-left */
+    padding: 8rem 2rem 2rem 18rem;
+  }
+
   .v-enter,
   .v-leave-to {
     opacity: 0;

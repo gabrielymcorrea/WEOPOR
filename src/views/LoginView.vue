@@ -2,39 +2,55 @@
     <section>
         <div class="form"> 
             <form> 
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email" v-model="email">
-                <label for="password">Senha</label>
-                <input id="password" name="password" type="password" v-model="password">
+                <InputComponent
+                  id="email"
+                  type="text"
+                  name="Email"
+                  isRequired="true"
+                  label="Email"
+                  placeholder="Informe seu email"
+                />
 
-                <button>Logar </button>
+                <InputComponent
+                  id="password"
+                  type="password"
+                  name="password"
+                  isRequired="true"
+                  label="Senha"
+                  placeholder="Informe sua senha"
+                />
+
+                <ButtonComponent label="Entrar" /> 
             </form>
         </div>
-        <div class="banner"> 
-            <img src="@/assets/login.png" alt="login">
-        </div>
+        <!-- <img src="@/assets/login.png" alt="login"> -->
     </section>
 </template>
 
 
 <script>
 import { mapMutations } from "vuex";
+import InputComponent from "@/components/InputComponent";
+import ButtonComponent from "@/components/ButtonComponent";
 
 export default {
-  name: "LoginView",
-  data() {
-    return {
-      email: "",
-      password: ""
-    };
-  },
-  created() {
-    this.toggleEveryDisplay();
-    document.title = "Login";
-  },
-  methods: {
-    ...mapMutations(["toggleEveryDisplay"]),
-  },
+    name: "LoginView",
+    components: {
+        InputComponent, ButtonComponent
+    },
+    data() {
+        return {
+        email: "",
+        password: ""
+        };
+    },
+    created() {
+        this.toggleEveryDisplay();
+        document.title = "Login";
+    },
+    methods: {
+        ...mapMutations(["toggleEveryDisplay"]),
+    },
 };
 </script>
 

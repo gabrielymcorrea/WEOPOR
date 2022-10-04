@@ -20,11 +20,8 @@ export default {
     },
     data(){
         return {
-            title: "",
+            title: this.$store.state.title,
         }
-    },
-    created(){
-        this.title = document.title
     }
 }
 </script>
@@ -45,10 +42,15 @@ export default {
     img{
         width: 3rem;
         height: 3rem;
-        margin: 0 0.5rem;
+        margin: 0 0 0 0.6rem;
     }
 
     small{
         font-weight: bold;
+    }
+
+    div{
+        display: flex;
+        align-items: center;
     }
 </style>

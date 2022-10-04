@@ -5,7 +5,6 @@
         <nav>
             <router-link to="/"><font-awesome-icon icon="fa-solid fa-house" /> Dashboard </router-link>
             <router-link to="/produtos"><font-awesome-icon icon="fa-solid fa-cookie-bite" /> Produtos </router-link>
-            <router-link to="/"><font-awesome-icon icon="fa-solid fa-right-to-bracket" /> Sair </router-link>
         </nav>
 
         <a class="comunicado">
@@ -74,5 +73,9 @@ export default {
         height: 70%;
         width: 70%;
         margin-bottom: 1rem;
+    }
+
+    b:hover{
+        text-decoration: underline;
     }
 </style>
