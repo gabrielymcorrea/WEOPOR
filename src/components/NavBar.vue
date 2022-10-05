@@ -1,6 +1,6 @@
 <template>
     <section>
-        <h3>{{title}}</h3>
+        <h3>{{ $route.name }}</h3>
 
         <div> 
             <small> Ches's </small>
@@ -20,7 +20,6 @@ export default {
     },
     data(){
         return {
-            title: this.$store.state.title,
         }
     }
 }
@@ -37,6 +36,7 @@ export default {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        display:none;
     }
 
     img{

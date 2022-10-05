@@ -1,14 +1,14 @@
 <template>
     <div> 
         <label for="name">{{label}}</label>
-        <input :id="name" :name="name" :type="type" :placeholder="placeholder"> 
+        <input :id="id" :name="name" :type="type"> 
     </div>
 </template>
 
 <script>
 
 export default {
-    props: ['name', 'label', 'type' ,'isRequired','placeholder']
+    props: ['name', 'label', 'type' ,'isRequired','id']
 }
 </script>
 
@@ -23,6 +23,19 @@ export default {
         padding: 0.6rem;
         border: 1px solid #c1c1c1;
         border-radius: 3px;
-        background-color: #f5f5f5;
+        /* background-color: #f5f5f5; */
+        margin-bottom: 1rem;
+        color: #a0a0a0;
+    }
+
+    input:focus {
+        outline: 0;
+        border: 1px solid #373F4C;
+    }
+
+    label{
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #373F4C;
     }
 </style>

@@ -2,14 +2,22 @@
     <section>
         <div class="form"> 
             <img src="@/assets/logo.png" alt="foto perfil">
-            
-            <h2>Bem vindo de volta.</h2>
+
+            <h2>Olá, Bem vindo.</h2>
 
             <form> 
                 <InputComponent
+                    id="name"
+                    type="text"
+                    name="name"
+                    isRequired="true"
+                    label="Nome do estabelecimento"
+                />
+
+                <InputComponent
                     id="email"
                     type="text"
-                    name="Email"
+                    name="email"
                     isRequired="true"
                     label="Email"
                 />
@@ -22,16 +30,10 @@
                     label="Senha"
                 />
 
-                <div> 
-                    <CheckBox label="Lembre-me" id="CheckBox" name="CheckBox"/>
-
-                    <router-link to="/">Esqueceu a senha?</router-link>
-                </div>
-
-                <ButtonComponent label="Entrar" /> 
+                <ButtonComponent label="Cadastrar" /> 
             </form>
 
-            <p> Não possui conta? <router-link to="/register">Cadastre-se</router-link> </p>
+            <p>Já possui conta? <router-link to="/login">Entrar</router-link> </p>
         </div>
 
         <div class="banner">
@@ -45,13 +47,12 @@
 import { mapMutations } from "vuex";
 import InputComponent from "@/components/InputComponent";
 import ButtonComponent from "@/components/ButtonComponent";
-import CheckBox from "@/components/CheckBox";
 
 
 export default {
-    name: "LoginView",
+    name: "RegisterView",
     components: {
-        InputComponent, ButtonComponent, CheckBox
+        InputComponent, ButtonComponent,
     },
     data() {
         return {
@@ -76,8 +77,9 @@ export default {
         grid-template-columns: 1fr 1fr;
         justify-content: space-between;
         align-items: center;
+
         background-color: #fff;
-        height:100vh;
+        height: 100vh;
     }
 
     a{ 
@@ -86,14 +88,8 @@ export default {
     }
     
     h2{
-        color: #373F4C;
+        color: #191a19;
         margin-bottom: 2rem;
-    }
-
-    form > div{
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 0.7rem;
     }
 
     p{

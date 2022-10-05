@@ -29,6 +29,8 @@ export default {
         padding: 2rem 3rem;
         position: fixed;
         z-index: 1;
+
+        display: none;
     }
 
     section h2{
