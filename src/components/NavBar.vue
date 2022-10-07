@@ -1,11 +1,15 @@
 <template>
-    <section>
-        <h3>{{ $route.name }}</h3>
+    <section class="navBar">
+        <div>
+            <font-awesome-icon icon="fas fa-bars" />
 
-        <div> 
+            <h3>{{ $route.name }}</h3>
+        </div>
+
+        <div > 
             <small> Ches's </small>
             <img src="@/assets/profile.jpg" alt="foto perfil">
-            <DropDown />
+            <DropDown :paginas="urls"/>
         </div>
     </section>
 </template>
@@ -20,7 +24,19 @@ export default {
     },
     data(){
         return {
+            urls : [
+                {
+                    "url":"/perfil",
+                    "label":"Perfil",
+                }, {
+                    "url":"/",
+                    "label":"Sair",
+                }
+            ]
         }
+    },
+    created() {
+        console.log(this.urls)
     }
 }
 </script>
@@ -36,7 +52,6 @@ export default {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        display:none;
     }
 
     img{
@@ -52,5 +67,14 @@ export default {
     div{
         display: flex;
         align-items: center;
+    }   
+
+    h3{
+        margin-left: 0.5rem;
+    }
+
+    svg{
+        font-size: 1.5rem;
+        color: #6cae75;
     }
 </style>

@@ -5,6 +5,7 @@ import DashboardView from '../views/DashboardView.vue'
 import LoginView from '../views/LoginView.vue'
 import ErrorView from "../views/ErrorView.vue"
 import RegisterView from "../views/RegisterView.vue"
+import PerfilView from "../views/PerfilView.vue"
 
 const routes = [
   {
@@ -18,7 +19,7 @@ const routes = [
   },
   {
     path: '/produtos',
-    name: 'Produto',
+    name: 'Produtos',
     component: ProdutoView
   },
   {
@@ -30,6 +31,11 @@ const routes = [
     path: '/register',
     name: 'Register',
     component: RegisterView
+  },
+  {
+    path: '/perfil',
+    name: 'Perfil',
+    component: PerfilView
   },
 ]
 

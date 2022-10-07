@@ -12,7 +12,6 @@ export default {
     name: 'ErrorView',
     created() {
         this.toggleEveryDisplay();
-        document.title = "Erro";
     },
     methods: {
         ...mapMutations(["toggleEveryDisplay"]),

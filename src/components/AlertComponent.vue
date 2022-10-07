@@ -1,13 +1,13 @@
 <template>
-    <section class="container">
-    </section>
+    <div>
+
+    </div>
 </template>
 
 <script>
-
 export default {
-  name: "ProdutoView",
-};
+    name: "AlertComponent"
+}
 </script>
 
 <style>

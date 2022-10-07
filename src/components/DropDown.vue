@@ -1,23 +1,37 @@
 <template>
-    <div>
-        <font-awesome-icon icon="fa-solid fa-sort-down" />
+  <div>
+    <font-awesome-icon icon="fa-solid fa-sort-down" @click.prevent="Show = !Show"/>
 
-        <nav>
-            <router-link to="/">Perfil </router-link>
-            <router-link to="/">Sair <font-awesome-icon icon="fa-solid fa-share-from-square" /></router-link>
+    <transition mode="out-in">
+        <nav v-if="Show">
+        <router-link v-for="pagina in paginas" :key="pagina" :to="pagina.url">
+            {{ pagina.label }}
+            <font-awesome-icon
+            v-if="pagina.label == 'Sair'"
+            icon="fa-solid fa-share-from-square"
+        /></router-link>
         </nav>
-
-    </div>
+    </transition>
+  </div>
 </template>
 
 <script>
 export default {
-    name: 'DropDown',
-}
+  name: "DropDown",
+  props: ["paginas"],
+  data(){
+    return{
+        Show: false,
+    }
+  },
+  created() {
+    console.log(this.Show);
+  },
+};
 </script>
 
 <style scoped>
-    nav{
+    nav {
         display: flex;
         flex-direction: column;
         position: absolute;
@@ -28,20 +42,20 @@ export default {
         background: #fff;
     }
 
-    nav a{
+    nav a {
         padding: 0.5rem 1rem;
     }
 
-    a:last-child { 
+    a:last-child {
         border-top: 1px solid #f1f1f1;
         padding-top: 4px;
     }
 
-    a:hover{
+    a:hover {
         background-color: #f1f1f1;
     }
 
-    svg{
+    svg {
         position: absolute;
         right: 0;
         margin-right: 15px;

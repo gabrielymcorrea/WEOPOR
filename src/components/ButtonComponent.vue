@@ -1,20 +1,18 @@
 <template>
-    <button>
+    <button :style="{background: cor}">
         {{label}}
     </button>
 </template>
  
 <script>
-
 export default {
-    props: ['label']
+    props: ['label','cor']
 }
 </script>
 
 <style scoped>
     button{
         color: white;
-        background-color: #2a6041;
         border: none;
         padding: 0.6rem 2rem;
         border-radius: 3px;

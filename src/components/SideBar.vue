@@ -1,5 +1,5 @@
 <template>
-    <section> 
+    <section class="sideBar"> 
         <h2> <b>WE</b>OPOR </h2>
 
         <nav>
@@ -9,7 +9,7 @@
 
         <a class="comunicado">
             <img src="@/assets/pedido.png" alt="pedidos">
-            <p>Não deixe seus clientes esperando, <b>acompanhe seus pedidos. </b></p>
+            <p>Não deixe seus clientes esperando, <b class="textDecoraction">acompanhe seus pedidos. </b></p>
         </a>
     </section>
 </template>
@@ -29,8 +29,6 @@ export default {
         padding: 2rem 3rem;
         position: fixed;
         z-index: 1;
-
-        display: none;
     }
 
     section h2{
@@ -77,7 +75,7 @@ export default {
         margin-bottom: 1rem;
     }
 
-    b:hover{
+    .textDecoraction:hover{
         text-decoration: underline;
     }
 </style>

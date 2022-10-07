@@ -1,7 +1,5 @@
 <template>
-    <section class="container">
-        <h1>Dashboard</h1>
-
+    <section>
         <CardComponent />
     </section>
 </template>
@@ -15,9 +13,6 @@ export default {
   components: {
     CardComponent
   },
-  created () {
-    document.title = "Dashboard";
-  }
 };
 </script>
 

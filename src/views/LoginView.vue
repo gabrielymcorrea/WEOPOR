@@ -28,7 +28,7 @@
                     <router-link to="/">Esqueceu a senha?</router-link>
                 </div>
 
-                <ButtonComponent label="Entrar" /> 
+                <ButtonComponent label="Entrar" cor="#2a6041"/> 
             </form>
 
             <p> Não possui conta? <router-link to="/register">Cadastre-se</router-link> </p>
@@ -104,7 +104,7 @@ export default {
     img{
         position: absolute;
         top: 25px;
-        width: 3rem;
+        width: 2.5rem;
     }
 
     .form{

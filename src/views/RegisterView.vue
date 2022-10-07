@@ -30,7 +30,7 @@
                     label="Senha"
                 />
 
-                <ButtonComponent label="Cadastrar" /> 
+                <ButtonComponent label="Entrar" cor="#2a6041"/> 
             </form>
 
             <p>Já possui conta? <router-link to="/login">Entrar</router-link> </p>
@@ -100,7 +100,7 @@ export default {
     img{
         position: absolute;
         top: 25px;
-        width: 3rem;
+        width: 2.5rem;
     }
 
     .form{

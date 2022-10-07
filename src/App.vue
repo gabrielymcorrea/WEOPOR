@@ -1,11 +1,11 @@
 <template>
-  <div id="app">
-    <NavBar v-if="this.$store.state.showNav"/>
-    <SideBar v-if="this.$store.state.showNav"/>
+  <div id="app" class="grid">
+    <NavBar v-if="this.$store.state.showNav" />
+    <SideBar v-if="this.$store.state.showNav" />
 
     <main id="main">
       <transition mode="out-in">
-        <router-view/>
+        <router-view />
       </transition>
     </main>
   </div>
@@ -18,8 +18,8 @@ import NavBar from "@/components/NavBar.vue";
 export default {
   components: {
     SideBar,
-    NavBar
-  }
+    NavBar,
+  },
 };
 </script>
 
@@ -30,66 +30,83 @@ ebebeb
 a4bfeb
 00487c
 */
-  @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap");
 
-  * {
-    box-sizing: border-box;
-  }
+* {
+  box-sizing: border-box;
+}
 
-  body,
-  ul,
-  li,
-  h1,
-  h2,
-  p {
-    padding: 0px;
-    margin: 0px;
-  }
+body,
+ul,
+li,
+h1,
+h2,
+p {
+  padding: 0px;
+  margin: 0px;
+}
 
-  ul {
-    list-style: none;
-  }
+ul {
+  list-style: none;
+}
 
-  body {
-    font-family: 'Ubuntu', sans-serif;
-    color: #a0a0a0;
-    background: #EBEBEB;
-    cursor: default;
-  }
+a,
+svg {
+  text-decoration: none;
+  color: #a0a0a0;
+  cursor: pointer;
+}
 
-  a,svg {
-    text-decoration: none;
-    color:#a0a0a0;
-    cursor: pointer;
-  }
+img {
+  object-fit: cover;
+}
 
-  img{
-    object-fit: cover;
-  }
+.grid {
+  display: grid;
+  grid-template-columns: 16rem auto auto;
+  grid-template-rows: 5rem auto auto;
+  grid-template-areas:
+    "navBar navBar navBar"
+    "sideBar main main"
+    "sideBar main main";
+}
 
-  .container{
-    /* padding-top
-padding-right
-padding-bottom
-padding-left */
-    padding: 8rem 2rem 2rem 18rem;
-  }
+body {
+  font-family: "Ubuntu", sans-serif;
+  color: #a0a0a0;
+  background: #ebebeb;
+  cursor: default;
+}
 
-  .v-enter,
-  .v-leave-to {
-    opacity: 0;
-  }
+.grid > .navBar {
+  grid-area: navBar;
+}
 
-  .v-enter {
-    transform: translate3d(0, -20px, 0);
-  }
+.grid > .sideBar {
+  grid-area: sideBar;
+}
 
-  .v-leave-to {
-    transform: translate3d(0, 20px, 0);
-  }
+.grid > #main {
+  grid-area: main;
+  padding: 2rem 3rem;
+  height: 100vh;
+}
 
-  .v-enter-active,
-  .v-leave-active {
-    transition: all 0.3s;
-  }
+.v-enter,
+.v-leave-to {
+  opacity: 0;
+}
+
+.v-enter {
+  transform: translate3d(0, -20px, 0);
+}
+
+.v-leave-to {
+  transform: translate3d(0, 20px, 0);
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: all 0.3s;
+}
 </style>
